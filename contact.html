@@ -1,34 +1,30 @@
----
-layout: default
-title: Contact Us
----
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanctions.AI - Contact Us</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Assuming a separate CSS file -->
+    <title>Sanctions AI - No-code Sanctions, AML, and Compliance</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             line-height: 1.6;
+            background-color: #f4f6f9;
+            color: #333;
         }
 
         .navbar {
-            background-color: #333;
+            background-color: black;
             overflow: hidden;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 16px;
+            padding: 0 18px;
         }
 
-        .navbar a, .navbar .company-name {
-            padding: 14px 16px;
+        .navbar a, .navbar .logo-container {
+            padding: 12px 12px;
             text-decoration: none;
         }
 
@@ -42,15 +38,13 @@ title: Contact Us
             color: black;
         }
 
-        .company-name {
-            color: white;
-            font-weight: bold;
+        .logo-container {
             display: flex;
             align-items: center;
         }
 
-        .company-name img {
-            margin-right: 8px;
+        .logo-container img {
+            margin-right: 12px;
         }
 
         .content {
@@ -58,34 +52,71 @@ title: Contact Us
             max-width: 800px;
             margin: 0 auto;
         }
+            .footer {
+        background-color: #333;
+        color: white;
+        padding: 20px 0;
+    }
 
-        form {
-            display: flex;
-            flex-direction: column;
-        }
+    .footer .content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
 
-        input[type="text"], input[type="email"], input[type="tel"], button {
-            margin: 10px 0;
-            padding: 10px;
-        }
+    .footer-sections {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-links, .footer-map {
+        flex: 1;
+        padding: 0 20px;
+    }
+
+    .footer-links h3, .footer-map h3 {
+        border-bottom: 2px solid white;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .footer a {
+        color: #ddd;
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .footer a:hover {
+        color: #ffffff;
+    }
+
+    iframe {
+        margin-top: 10px;
+    }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
     <div class="navbar">
-        <div class="company-name">
-            <img src="logo.png" alt="Sanctions.AI Logo" width="60">
-            Sanctions.AI
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="logo.png" alt="Sanctions.AI Logo" width="200">
+            </a>
         </div>
         <div>
-            <a href="index.html">Home</a>
-            <a href="/sanctions-screening.html">Sanctions Screening</a>
-            <a href="/aml-compliance.html">AML/Compliance</a>
-            <a href="/ultimate-beneficial-ownership-ubo.html">UBO</a>
-            <a href="/contact.html">Contact Us</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="sanctions-screening.html">Sanctions Screening</a>
+            <a href="aml-compliance.html">AML/Compliance</a>
+            <a href="ultimate-beneficial-ownership-ubo.html">UBO</a>
+            <a href="industries.html">Industries</a>  
+            <a href="contact.html">Contact</a>
         </div>
     </div>
+
+
 
     <!-- Contact Content -->
     <div class="content">

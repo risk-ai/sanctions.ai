@@ -9,7 +9,7 @@ title: Home
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-driven Sanctions Screening</title>
+    <title>Sanctions.AI - AI-driven Sanctions Screening</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,9 +23,10 @@ title: Home
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 16px; /* Added padding for better alignment */
         }
 
-        .navbar a, .navbar img {
+        .navbar a, .navbar img, .navbar .company-name {
             padding: 14px 16px;
             text-decoration: none;
         }
@@ -40,6 +41,17 @@ title: Home
             color: black;
         }
 
+        .company-name {
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .company-name img {
+            margin-right: 8px; /* Added margin for spacing between logo and text */
+        }
+
         .hero {
             background-color: #f7f7f7;
             padding: 40px;
@@ -52,7 +64,10 @@ title: Home
 <body>
     <!-- Navbar -->
     <div class="navbar">
-        <img src="logo.png" alt="Sanctions AI Logo" width="100"> <!-- Logo here -->
+        <div class="company-name">
+            <img src="logo.png" alt="Sanctions.AI Logo" width="60"> <!-- Logo here -->
+            Sanctions.AI
+        </div>
         <div>
             <a href="#sanctions-screening">Sanctions Screening</a>
             <a href="#aml-compliance">AML/Compliance</a>
@@ -62,7 +77,7 @@ title: Home
 
     <!-- Hero Section -->
     <div class="hero">
-        <h1>Welcome to [Your Company Name]</h1>
+        <h1>Welcome to Sanctions.AI</h1>
         <p>The future of AI-driven sanctions screening.</p>
         <a href="#contact">Contact Us</a>
     </div>
@@ -81,7 +96,7 @@ title: Home
     <section>
         <h2>What our clients say</h2>
         <blockquote>
-            "The accuracy and efficiency of [Your Company Name]'s solution significantly reduced our operation costs."
+            "The accuracy and efficiency of Sanctions.AI's solution significantly reduced our operation costs."
             - ABC Corp
         </blockquote>
         <!-- You can add more testimonials as needed -->

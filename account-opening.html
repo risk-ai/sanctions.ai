@@ -105,6 +105,38 @@
     iframe {
         margin-top: 10px;
     }
+
+
+      .form-container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        label, input, textarea {
+            vertical-align: middle;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
     </style>
 
 
@@ -129,26 +161,37 @@
     
 <body>
 
+
 <div class="form-container">
     <h2>Account Opening Form</h2>
     <form id="accountForm" action="mailto:accounts@sanctions.ai?cc=robert@fraud.net" method="post" enctype="text/plain">
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="firstName" required><br><br>
-        
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lastName" required><br><br>
-        
-        <label for="cemail">Corporate Email:</label>
-        <input type="email" id="cemail" name="corpEmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br><br>
-        
-        <label for="company">Company:</label>
-        <input type="text" id="company" name="companyName" required><br><br>
-        
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phoneNumber" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><small> Format: 123-456-7890</small><br><br>
-        
-        <label for="details">Additional Details:</label><br>
-        <textarea id="details" name="detailsInfo" rows="5" cols="40"></textarea><br><br>
+        <table>
+            <tr>
+                <td><label for="fname">First Name:</label></td>
+                <td><input type="text" id="fname" name="firstName" required></td>
+                <td><label for="lname">Last Name:</label></td>
+                <td><input type="text" id="lname" name="lastName" required></td>
+            </tr>
+            <tr>
+                <td><label for="cemail">Corporate Email:</label></td>
+                <td colspan="3"><input type="email" id="cemail" name="corpEmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td>
+            </tr>
+            <tr>
+                <td><label for="company">Company:</label></td>
+                <td colspan="3"><input type="text" id="company" name="companyName" required></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number:</label></td>
+                <td colspan="3">
+                    <input type="tel" id="phone" name="phoneNumber" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    <small> Format: 123-456-7890</small>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="details">Additional Details:</label></td>
+                <td colspan="3"><textarea id="details" name="detailsInfo" rows="5" cols="40"></textarea></td>
+            </tr>
+        </table>
         
         <input type="submit" value="Submit">
     </form>

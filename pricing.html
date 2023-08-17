@@ -1,111 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanctions AI - Pricing</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Pricing Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            background-color: #f4f6f9;
-            color: #333;
-        }
-
-        .navbar {
-            background-color: black;
-            overflow: hidden;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 18px;
-        }
-
-        .navbar a, .navbar .logo-container {
-            padding: 12px 12px;
-            text-decoration: none;
-        }
-
-        .navbar a {
-            color: white;
-            text-align: center;
-        }
-
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo-container img {
-            margin-right: 12px;
-        }
-
-        .content {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .images {
-              display: block;
-              margin-left: auto;
-              margin-right: auto;
-              align-items: center;
-              width: 90%;
-        }
-        
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-        }
-    
-        .footer .content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-        }
-    
-        .footer-sections {
-            display: flex;
-            justify-content: space-between;
-        }
-    
-        .footer-links, .footer-map {
-            flex: 1;
-            padding: 0 20px;
-        }
-    
-        .footer-links h3, .footer-map h3 {
-            border-bottom: 2px solid white;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-    
-        .footer a {
-            color: #ddd;
-            text-decoration: none;
-            margin-bottom: 10px;
-            display: block;
-        }
-    
-        .footer a:hover {
-            color: #ffffff;
-        }
-    
-        iframe {
-            margin-top: 10px;
-        }
-    
         .pricing-container {
             display: flex;
             justify-content: space-around;
@@ -130,8 +29,12 @@
             margin-top: 10px;
         }
     </style>
+    <script>
+        function selectPlan(planName) {
+            window.location.href = 'account_opening_form.html?plan=' + planName;
+        }
+    </script>
 </head>
-
 <body>
 
 <div class="pricing-container">
@@ -139,30 +42,35 @@
         <h2>Less than 10,000</h2>
         <p>Sanctions checks per month</p>
         <div class="price">$0.01/check</div>
+        <button onclick="selectPlan('LessThan10000')">Select</button>
     </div>
 
     <div class="pricing-card">
         <h2>Up to 100,000</h2>
         <p>Sanctions checks per month</p>
         <div class="price">$0.008/check</div>
+        <button onclick="selectPlan('UpTo100000')">Select</button>
     </div>
 
     <div class="pricing-card">
         <h2>Up to 1,000,000</h2>
         <p>Sanctions checks per month</p>
         <div class="price">$0.006/check</div>
+        <button onclick="selectPlan('UpTo1000000')">Select</button>
     </div>
 
     <div class="pricing-card">
         <h2>Up to 10,000,000</h2>
         <p>Sanctions checks per month</p>
         <div class="price">$0.004/check</div>
+        <button onclick="selectPlan('UpTo10000000')">Select</button>
     </div>
 
     <div class="pricing-card">
         <h2>More than 10,000,000</h2>
         <p>Sanctions checks per month</p>
         <div class="price">$0.002/check</div>
+        <button onclick="selectPlan('MoreThan10000000')">Select</button>
     </div>
 </div>
 

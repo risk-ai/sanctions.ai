@@ -179,6 +179,7 @@
 </head>
     
 <body>
+    
 <!-- Navbar -->
 <div class="navbar">
     <div class="logo-container">
@@ -197,8 +198,8 @@
     </div>
 </div>
 
-    <div class="form-container">
-    <h2>Account Opening Form</h2>
+<div class="form-container">
+<h2>Account Opening Form</h2>
         
 <form id="accountForm" onsubmit="submitForm(event)">
     
@@ -211,7 +212,7 @@
             </tr>
             <tr>
                 <td><label for="cemail">Corporate Email:</label></td>
-                <td colspan="3"><input type="email" id="cemail" name="corpEmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td>
+                <td colspan="3"><input type="email" id="cemail" name="corpEmail" required></td>
             </tr>
             <tr>
                 <td><label for="company">Company:</label></td>
@@ -220,7 +221,7 @@
             <tr>
                 <td><label for="phone">Phone Number:</label></td>
                 <td colspan="3">
-                    <input type="tel" id="phone" name="phoneNumber" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    <input type="tel" id="phone" name="phoneNumber" required>
                     <small> Format: 123-456-7890</small>
                 </td>
             </tr>

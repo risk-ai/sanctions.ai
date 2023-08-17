@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Opening Form</title>
+    <style>
+        /* ... existing styles ... */
+    </style>
+        /* ... Google Sheet New Account Deployment  ... */
+        /* Deployment ID:  AKfycbzkCcn-uOn-VDCuhylITH3Pg07nzfCWEhMWHZHG-LibBsJ4eCf23alb5ko5uasGG-Iw */
+        /* URL: https://script.google.com/a/macros/sanctions.ai/s/AKfycbzkCcn-uOn-VDCuhylITH3Pg07nzfCWEhMWHZHG-LibBsJ4eCf23alb5ko5uasGG-Iw/exec */
+
+  <script>
+        function submitForm(e) {
+            e.preventDefault();
+            var formData = new FormData(document.getElementById('accountForm'));
+            fetch('https://script.google.com/a/macros/sanctions.ai/s/AKfycbzkCcn-uOn-VDCuhylITH3Pg07nzfCWEhMWHZHG-LibBsJ4eCf23alb5ko5uasGG-Iw/exec', {  // Replace with your Web App URL from above.
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.result === "success") {
+                    window.location.href = "thank-you.html";
+                } else {
+                    alert('There was an error, please try again.');
+                }
+            });
+        }
+
+        function getURLParameter(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+        }
+
+        window.onload = function() {
+            var planName = getURLParameter('plan');
+            if (planName) {
+                var hiddenInput = document.createElement("input");
+                hiddenInput.setAttribute("type", "hidden");
+                hiddenInput.setAttribute("name", "selectedPlan");
+                hiddenInput.setAttribute("value", planName);
+                document.getElementById("accountForm").appendChild(hiddenInput);
+            }
+        }
+    </script>
+</head>
+<body>
+
+<form id="accountForm" onsubmit="submitForm(event)">
+    <!-- ... your form fields ... -->
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

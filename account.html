@@ -15,15 +15,11 @@
         }
     </style>
     <script>
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'GET, POST',
-        }
-        
+       
         function submitForm(e) {
             e.preventDefault();
             var formData = new FormData(document.getElementById('accountForm'));
-            fetch('https://script.google.com/macros/s/AKfycbz4IoeEyIc1ZRF6hkI8hEZtEuVw2wap03AYQzsww6NVtsOCmZMGMCQn_U4egn5cItqa/exec', {  // Replace with your Web App URL from above.
+            fetch('https://script.google.com/macros/s/AKfycbz4IoeEyIc1ZRF6hkI8hEZtEuVw2wap03AYQzsww6NVtsOCmZMGMCQn_U4egn5cItqa/exec', {
                 method: 'POST',
                 body: formData
             })

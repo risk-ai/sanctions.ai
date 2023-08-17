@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Opening Form</title>
+    <script>
+        function getURLParameter(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+        }
+
+        window.onload = function() {
+            var planName = getURLParameter('plan');
+            if (planName) {
+                var hiddenInput = document.createElement("input");
+                hiddenInput.setAttribute("type", "hidden");
+                hiddenInput.setAttribute("name", "selectedPlan");
+                hiddenInput.setAttribute("value", planName);
+                document.getElementById("accountForm").appendChild(hiddenInput);
+            }
+        }
+    </script>
 </head>
 <body>
-    
+
 <div class="form-container">
     <h2>Account Opening Form</h2>
-    <form action="mailto:accounts@sanctions.ai?cc=robert@fraud.net" method="post" enctype="text/plain">
+    <form id="accountForm" action="mailto:accounts@sanctions.ai?cc=robert@fraud.net" method="post" enctype="text/plain">
         <label for="fname">First Name:</label>
         <input type="text" id="fname" name="firstName" required><br><br>
         

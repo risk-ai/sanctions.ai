@@ -5,8 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Opening Form</title>
     <style>
-        /* ... existing styles ... */
+
+      .form-container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        label, input, textarea {
+            vertical-align: middle;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
     </style>
+
+    
         /* ... Google Sheet New Account Deployment  ... */
         /* Deployment ID:  AKfycbzkCcn-uOn-VDCuhylITH3Pg07nzfCWEhMWHZHG-LibBsJ4eCf23alb5ko5uasGG-Iw */
         /* URL: https://script.google.com/a/macros/sanctions.ai/s/AKfycbzkCcn-uOn-VDCuhylITH3Pg07nzfCWEhMWHZHG-LibBsJ4eCf23alb5ko5uasGG-Iw/exec */
@@ -48,9 +80,83 @@
 <body>
 
 <form id="accountForm" onsubmit="submitForm(event)">
-    <!-- ... your form fields ... -->
+    
+        <table>
+            <tr>
+                <td><label for="fname">First Name:</label></td>
+                <td><input type="text" id="fname" name="firstName" required></td>
+                <td><label for="lname">Last Name:</label></td>
+                <td><input type="text" id="lname" name="lastName" required></td>
+            </tr>
+            <tr>
+                <td><label for="cemail">Corporate Email:</label></td>
+                <td colspan="3"><input type="email" id="cemail" name="corpEmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td>
+            </tr>
+            <tr>
+                <td><label for="company">Company:</label></td>
+                <td colspan="3"><input type="text" id="company" name="companyName" required></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number:</label></td>
+                <td colspan="3">
+                    <input type="tel" id="phone" name="phoneNumber" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    <small> Format: 123-456-7890</small>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="details">Additional Details:</label></td>
+                <td colspan="3"><textarea id="details" name="detailsInfo" rows="5" cols="40"></textarea></td>
+            </tr>
+        </table>
+    
     <button type="submit">Submit</button>
 </form>
 
 </body>
+
+    
+    
+<!-- Footer Section -->
+<div class="footer">
+    <div class="content">
+        <div class="footer-sections">
+            <div class="footer-links">
+            </div>
+            <div class="footer-links">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="about-us.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Industries</h3>
+                <ul>
+                    <li><a href="industries.html">Banking</a></li>
+                    <li><a href="industries.html">Payments</a></li>
+                    <li><a href="industries.html">Lending</a></li>
+                    <li><a href="industries.html">Wealth</a></li>
+                    <li><a href="industries.html">Insurance</a></li>
+                    <li><a href="industries.html">Fintechs</a></li>
+                    <li><a href="industries.html">Gaming</a></li>
+                    <li><a href="industries.html">Ecommerce</a></li>
+                    <li><a href="industries.html">Travel</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-map">
+                <h3>Visit Us</h3>
+                <a href="https://www.google.com/maps?q=1740+Broadway,+New+York,+NY+10019" target="_blank">1740 Broadway, New York, NY 10019</a>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12087.293736521537!2d-73.981891!3d40.7647289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3096b9430c2ea213!2s1740%20Broadway%2C%20New%20York%2C%20NY%2010019%2C%20USA!5e0!3m2!1sen!2sus!4v1628727356780!5m2!1sen!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</html>
 </html>

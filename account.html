@@ -39,9 +39,9 @@
     </style>
 
     
-        /* ... Google Sheet New Account Deployment  ... */
-        /* Deployment ID:  AKfycbzkCcn-uOn-VDCuhylITH3Pg07nzfCWEhMWHZHG-LibBsJ4eCf23alb5ko5uasGG-Iw */
-        /* URL: https://script.google.com/a/macros/sanctions.ai/s/AKfycbzkCcn-uOn-VDCuhylITH3Pg07nzfCWEhMWHZHG-LibBsJ4eCf23alb5ko5uasGG-Iw/exec */
+        // ... Google Sheet New Account Deployment  ...
+        // Deployment ID:  AKfycbzkCcn-uOn-VDCuhylITH3Pg07nzfCWEhMWHZHG-LibBsJ4eCf23alb5ko5uasGG-Iw */
+        // URL: https://script.google.com/a/macros/sanctions.ai/s/AKfycbzkCcn-uOn-VDCuhylITH3Pg07nzfCWEhMWHZHG-LibBsJ4eCf23alb5ko5uasGG-Iw/exec */
 
   <script>
         function submitForm(e) {
@@ -77,8 +77,29 @@
         }
     </script>
 </head>
+    
 <body>
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="logo.png" alt="Sanctions AI Logo" width="200">
+        </a>
+    </div>
+    <div>
+        <a href="index.html" class="active">Home</a>
+        <a href="sanctions-screening.html">Sanctions Screening</a>
+        <a href="aml-compliance.html">AML/Compliance</a>
+        <a href="ubo.html">UBO</a>
+        <a href="industries.html">Industries</a>  
+        <a href="pricing.html">Pricing</a>  
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
 
+    <div class="form-container">
+    <h2>Account Opening Form</h2>
+        
 <form id="accountForm" onsubmit="submitForm(event)">
     
         <table>
@@ -110,7 +131,8 @@
         </table>
     
     <button type="submit">Submit</button>
-</form>
+    </form>
+</div>
 
 </body>
 

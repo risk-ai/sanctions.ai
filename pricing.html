@@ -60,78 +60,78 @@
               width: 90%;
         }
         
-    .footer {
-        background-color: #333;
-        color: white;
-        padding: 20px 0;
-    }
-
-    .footer .content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .footer-sections {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .footer-links, .footer-map {
-        flex: 1;
-        padding: 0 20px;
-    }
-
-    .footer-links h3, .footer-map h3 {
-        border-bottom: 2px solid white;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-    }
-
-    .footer a {
-        color: #ddd;
-        text-decoration: none;
-        margin-bottom: 10px;
-        display: block;
-    }
-
-    .footer a:hover {
-        color: #ffffff;
-    }
-
-    iframe {
-        margin-top: 10px;
-    }
-
-        .pricing-container {
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+    
+        .footer .content {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
-            justify-content: space-around;
-            padding: 20px;
+            justify-content: space-between;
         }
-
-        .pricing-card {
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 20px;
-            width: 15%;
-            text-align: center;
+    
+        .footer-sections {
+            display: flex;
+            justify-content: space-between;
         }
-
-        .pricing-card h2 {
-            font-size: 24px;
+    
+        .footer-links, .footer-map {
+            flex: 1;
+            padding: 0 20px;
+        }
+    
+        .footer-links h3, .footer-map h3 {
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
             margin-bottom: 20px;
         }
-
-        .price {
-            font-size: 20px;
+    
+        .footer a {
+            color: #ddd;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+    
+        .footer a:hover {
+            color: #ffffff;
+        }
+    
+        iframe {
             margin-top: 10px;
         }
+    
+            .pricing-container {
+                display: flex;
+                justify-content: space-around;
+                padding: 20px;
+            }
+    
+            .pricing-card {
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 20px;
+                width: 15%;
+                text-align: center;
+            }
+    
+            .pricing-card h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+    
+            .price {
+                font-size: 20px;
+                margin-top: 10px;
+            }
     </style>
     
     <script>
         function selectPlan(planName) {
-            window.location.href = 'account_opening.html?plan=' + planName;
+            window.location.href = 'account.html?plan=' + planName;
         }
     </script>
     
@@ -161,35 +161,35 @@
         <h2>Less than 10,000</h2>
         <p>Sanctions checks per month</p>
         <div class="price">$0.01/check</div>
-        <button onclick="selectPlan('LessThan10000')">Select</button>
+        <button onclick="selectPlan('1')">Select</button>
     </div>
 
     <div class="pricing-card">
         <h2>Up to 100,000</h2>
         <p>Sanctions checks per month</p>
         <div class="price">$0.008/check</div>
-        <button onclick="selectPlan('UpTo100000')">Select</button>
+        <button onclick="selectPlan('2')">Select</button>
     </div>
 
     <div class="pricing-card">
         <h2>Up to 1,000,000</h2>
         <p>Sanctions checks per month</p>
         <div class="price">$0.006/check</div>
-        <button onclick="selectPlan('UpTo1000000')">Select</button>
+        <button onclick="selectPlan('3')">Select</button>
     </div>
 
     <div class="pricing-card">
         <h2>Up to 10,000,000</h2>
         <p>Sanctions checks per month</p>
         <div class="price">$0.004/check</div>
-        <button onclick="selectPlan('UpTo10000000')">Select</button>
+        <button onclick="selectPlan('4')">Select</button>
     </div>
 
     <div class="pricing-card">
         <h2>More than 10,000,000</h2>
         <p>Sanctions checks per month</p>
         <div class="price">$0.002/check</div>
-        <button onclick="selectPlan('MoreThan10000000')">Select</button>
+        <button onclick="selectPlan('5')">Select</button>
     </div>
 </div>
 

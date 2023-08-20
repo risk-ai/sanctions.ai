@@ -28,6 +28,12 @@
             max-width: 500px;
             width: 90%;
         }
+
+        iframe {
+            width: 100%;
+            height: 400px; /* Adjust this value according to your needs */
+            border: none;
+        }
     </style>
 </head>
 
@@ -39,21 +45,12 @@
     <!-- Modal Structure -->
     <div id="hubspotModal">
         <div class="modal-content">
-            <div id="hubspot-form"></div>
+            <!-- Embed HubSpot form via iframe -->
+            <iframe src="https://share.hsforms.com/1NYnp8vikQg6-PQPdjfYenw19afb"></iframe>
         </div>
     </div>
 
-    <!-- HubSpot Form Embed Code -->
-    <script>
-        hbspt.forms.create({
-            portalId: "2113031",
-            formId: '3589e9f2-f8a4-420e-be3d-03dd8df61e9f',
-            target: 'https://share.hsforms.com/1NYnp8vikQg6-PQPdjfYenw19afb'
-        });
-    </script>
-
-    <!-- HubSpot script and Modal Logic -->
-    <script type="text/javascript" src="https://js.hsforms.net/forms/v2.js"></script>
+    <!-- Modal Logic -->
     <script>
         const modal = document.getElementById('hubspotModal');
         const btn = document.getElementById('chooseBtn');

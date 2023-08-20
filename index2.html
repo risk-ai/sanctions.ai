@@ -130,6 +130,31 @@
             height: 580px; /* Adjust this value according to your needs */
             border: none;
         }
+
+        /* Button Styles */
+        .demo-button {
+            background: linear-gradient(45deg, #007BFF, #00C6FF); /* Gradient background */
+            border: none;
+            border-radius: 50px; /* Rounded corners */
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 15px 30px; /* Top/bottom and left/right padding */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s, transform 0.3s; /* Transition effects for background and button press */
+            outline: none; /* Remove outline to keep things neat */
+        }
+
+        .demo-button:hover {
+            background: linear-gradient(45deg, #005BDF, #009BDF); /* Slightly darker gradient on hover */
+        }
+
+        .demo-button:active {
+            transform: scale(0.95); /* Button press effect */
+        }
+        
     </style>
 </head>
 
@@ -199,7 +224,7 @@
 
     
     <!-- Trigger Button -->
-    <button id="chooseBtn">Demo</button>
+    <button  class="demo-button" id="chooseBtn">Demo</button> 
 
     <!-- Modal Structure -->
     <div id="hubspotModal">
@@ -208,6 +233,7 @@
             <iframe src="https://share.hsforms.com/1NYnp8vikQg6-PQPdjfYenw19afb"></iframe>
         </div>
     </div>
+        
     <!-- Modal Logic -->
     <script>
         const modal = document.getElementById('hubspotModal');

@@ -10,12 +10,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Webpage Title</title>
+    <style>
+        /* Simple Modal Styles */
+        #hubspotModal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: #fff;
+            max-width: 500px;
+            width: 90%;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Place this where you want your HubSpot form to appear -->
-    <div id="hubspot-form"></div>
+    <!-- Trigger Button -->
+    <button id="showModal">Show HubSpot Form</button>
+
+    <!-- Modal Structure -->
+    <div id="hubspotModal">
+        <div class="modal-content">
+            <div id="hubspot-form"></div>
+        </div>
+    </div>
+
 
     <!-- HubSpot Form Embed Code -->
     <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
@@ -29,6 +61,21 @@
 
     <!-- Ensure you've also included the necessary HubSpot scripts -->
     <script type="text/javascript" src="https://js.hsforms.net/forms/v2.js"></script>
+    
+    <script>
+        const modal = document.getElementById('hubspotModal');
+        const btn = document.getElementById('showModal');
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 

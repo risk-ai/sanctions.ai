@@ -34,7 +34,7 @@
 <body>
 
     <!-- Trigger Button -->
-    <button id="showModal">Show HubSpot Form</button>
+    <button id="chooseBtn">Choose</button>
 
     <!-- Modal Structure -->
     <div id="hubspotModal">
@@ -46,17 +46,18 @@
     <!-- HubSpot Form Embed Code -->
     <script>
         hbspt.forms.create({
-           portalId: "2113031",
-           formId: "3589e9f2-f8a4-420e-be3d-03dd8df61e9f",
+        region: "na1",
+        portalId: "2113031",
+        formId: "3589e9f2-f8a4-420e-be3d-03dd8df61e9f"
             target: '#hubspot-form'
         });
     </script>
-    
+
     <!-- HubSpot script and Modal Logic -->
     <script type="text/javascript" src="https://js.hsforms.net/forms/v2.js"></script>
     <script>
         const modal = document.getElementById('hubspotModal');
-        const btn = document.getElementById('showModal');
+        const btn = document.getElementById('chooseBtn');
 
         btn.onclick = function() {
             modal.style.display = "block";
@@ -72,5 +73,3 @@
 </body>
 
 </html>
-
-

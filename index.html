@@ -3,27 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanctions.AI - Home</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-       /* Styles for the two-column layout */
         body {
-            display: flex;
-            justify-content: space-between; /* Distribute the columns */
-            align-items: start; /* Align columns to the top */
-            padding: 20px;
-            height: 100vh;
-        }
-
-        .left-column {
-            flex: 1; /* Take up equal width as right column */
-            padding-right: 10px; /* Some spacing between columns */
-        }
-
-        .right-column {
-            flex: 1; /* Take up equal width as left column */
-            padding-left: 10px; /* Some spacing between columns */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: #f4f6f9;
+            color: #333;
         }
 
         .navbar {
@@ -135,12 +124,43 @@
             <a href="industries.html">Industries</a>  
             <a href="pricing.html">Pricing</a>  
             <a href="contact.html">Contact</a>
+
+
+
+                <!-- Trigger Button -->
+                <button id="chooseBtn">Demo</button>
+            
+                <!-- Modal Structure -->
+                <div id="hubspotModal">
+                    <div class="modal-content">
+                        <!-- Embed HubSpot form via iframe -->
+                        <iframe src="https://share.hsforms.com/1NYnp8vikQg6-PQPdjfYenw19afb"></iframe>
+                    </div>
+                </div>
+            
+                <!-- Modal Logic -->
+                <script>
+                    const modal = document.getElementById('hubspotModal');
+                    const btn = document.getElementById('chooseBtn');
+            
+                    btn.onclick = function() {
+                        modal.style.display = "block";
+                    }
+            
+                    window.onclick = function(event) {
+                        if (event.target === modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script>
+            
+
             
         </div>
     </div>
 
     <!-- Content Section -->
-    <div class="left-column">
+    <div class="content">
         <h1>AI-Driven Sanctions, AML, and Compliance</h1>
         <p>As the financial landscape expands, so does its complexities. Banks and fintechs globally are in constant pursuit of ensuring security, credibility, and regulatory compliance. Sanctions AI bridges the gap between innovation and regulatory demands, providing state-of-the-art AI-driven solutions.  Additionally, Sanctions AI is the only low-latency sanctions screening service with total turnaround in as little as 200ms.  If you need true real-time screening, talk to us today.</p>
 
@@ -183,12 +203,8 @@
         <p>Join the future of sanctions screening, AML, and compliance. Experience the Sanctions AI difference today.</p>
     </div>
 
-     <div class="right-column">
-        <!-- Embed HubSpot form via iframe -->
-         <iframe src="https://share.hsforms.com/1NYnp8vikQg6-PQPdjfYenw19afb"></iframe>
-    </div>
-    
 </body>
+
 
 
     
@@ -236,7 +252,5 @@
     </div>
 </div>
 
-
-            
 
 </html>

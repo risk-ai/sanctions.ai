@@ -197,6 +197,36 @@
         <p>Join the future of sanctions screening, AML, and compliance. Experience the Sanctions AI difference today.</p>
     </div>
 
+
+    
+    <!-- Trigger Button -->
+    <button id="chooseBtn">Demo</button>
+
+    <!-- Modal Structure -->
+    <div id="hubspotModal">
+        <div class="modal-content">
+            <!-- Embed HubSpot form via iframe -->
+            <iframe src="https://share.hsforms.com/1NYnp8vikQg6-PQPdjfYenw19afb"></iframe>
+        </div>
+    </div>
+
+    <!-- Modal Logic -->
+    <script>
+        const modal = document.getElementById('hubspotModal');
+        const btn = document.getElementById('chooseBtn');
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    
 </body>
 
 
